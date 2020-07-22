@@ -26,7 +26,7 @@ function Friends(){
                                 header={friend.name}
                                 meta={friend.age}
                                 description={friend.email}
-                                extra={Date.now()}
+                                extra={friend.id}
                             />
                         </div>
                     );

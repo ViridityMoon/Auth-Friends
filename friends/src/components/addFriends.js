@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { axiosWithAuth } from '../auth/axiosWithAuth';
 
-function AddFriend() {
+function AddFriends() {
 
     const [ newFriend, setNewFriend ] = useState({
         name: '',
@@ -54,4 +54,4 @@ function AddFriend() {
         </div>
     )
 };
-export default AddFriend;
+export default AddFriends;

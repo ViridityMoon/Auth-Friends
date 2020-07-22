@@ -9,13 +9,14 @@ const Login = (props) => {
  
 const login = e => {
     e.preventDefault();
+    console.log(creds);
     axiosWithAuth()
         .post('/login', creds)
         .then(res => {
             localStorage.setItem('token', res.data.payload);
             props.history.push('/protected');
         })
-        .catch(err => console.log('Error: ', err));
+        .catch(err => console.log('Error: ', err.error));
     }
 
 const handleChange = e => {
@@ -40,7 +41,7 @@ const handleChange = e => {
             value={creds.password}
             onChange={handleChange}
           />
-          <button>Log in</button>
+          <button type='submit'>Log in</button>
         </form>
       </div>
     )
