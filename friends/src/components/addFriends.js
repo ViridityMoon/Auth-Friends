@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { axiosWithAuth} from '../auth/axiosWithAuth';
+import { axiosWithAuth } from '../auth/axiosWithAuth';
 
 function AddFriend() {
 
